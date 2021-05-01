@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="left">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        android:id="@+id/drawer_element"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:text="Tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textSize="27sp"
+            android:textStyle="normal|bold"
+            android:textAlignment="center" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@android:color/darker_gray"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="350sp"
+            android:divider="@color/white"
+            android:id="@+id/drawer_list_dynamic"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@android:color/darker_gray"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:id="@+id/notif">
+
+        <TextView
+            android:text="Notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/notification"
+            android:textSize="23sp"
+            android:paddingLeft="10sp" />
+
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/notifcount"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="10sp"
+            android:textSize="23sp" />
+
+    </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@android:color/darker_gray"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/white"
+            android:id="@+id/drawer_list_static"/>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>
